@@ -1,3 +1,0 @@
-[submodule "cloud_config"]
-	path = cloud_config
-	url = https://github.com/AnimusAm/cloud_config.git
