@@ -1,4 +1,4 @@
-package hr.smilebacksmile.db_client_demo.controller;
+package hr.smilebacksmile.controller;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -8,9 +8,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
-import hr.smilebacksmile.db_client_demo.test_db.dao.TestDataRepository;
-import hr.smilebacksmile.db_client_demo.test_db.dao.TestDataSpecificationBuilder;
-import hr.smilebacksmile.db_client_demo.test_db.domain.TestData;
+import hr.smilebacksmile.dao.TestDataRepository;
+import hr.smilebacksmile.dao.TestDataSpecificationBuilder;
+import hr.smilebacksmile.domain.TestData;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 

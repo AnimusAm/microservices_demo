@@ -1,6 +1,6 @@
-package hr.smilebacksmile.db_client_demo.test_db.dao;
+package hr.smilebacksmile.dao;
 
-import hr.smilebacksmile.db_client_demo.test_db.domain.TestData;
+import hr.smilebacksmile.domain.TestData;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;

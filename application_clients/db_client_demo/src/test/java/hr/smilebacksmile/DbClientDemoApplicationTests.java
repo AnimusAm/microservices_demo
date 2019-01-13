@@ -1,4 +1,4 @@
-package hr.smilebacksmile.db_client_demo;
+package hr.smilebacksmile;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package hr.smilebacksmile.db_client_demo.controller;
+package hr.smilebacksmile.controller;
 
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
@@ -10,8 +10,8 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
-import hr.smilebacksmile.db_client_demo.test_db.dao.TestDataRepository;
-import hr.smilebacksmile.db_client_demo.test_db.domain.TestData;
+import hr.smilebacksmile.dao.TestDataRepository;
+import hr.smilebacksmile.domain.TestData;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @SpringComponent

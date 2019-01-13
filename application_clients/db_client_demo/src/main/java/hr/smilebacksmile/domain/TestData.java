@@ -1,4 +1,4 @@
-package hr.smilebacksmile.db_client_demo.test_db.domain;
+package hr.smilebacksmile.domain;
 
 
 
