@@ -1,4 +1,4 @@
-package hr.smilebacksmile.nosql_db_client_demo.test_db.dao;
+package hr.smilebacksmile.dao;
 
 import hr.smilebacksmile.db_client_demo.test_db.domain.TestData;
 import org.springframework.data.jpa.domain.Specification;

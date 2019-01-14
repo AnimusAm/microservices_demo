@@ -1,13 +1,13 @@
-package hr.smilebacksmile.nosql_db_client_demo;
+package hr.smilebacksmile;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NosqlDbClientDemoApplication {
+public class NosqlDbServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NosqlDbClientDemoApplication.class, args);
+        SpringApplication.run(NosqlDbServiceApplication.class, args);
     }
 
 }

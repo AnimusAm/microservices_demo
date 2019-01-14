@@ -1,4 +1,4 @@
-package hr.smilebacksmile.nosql_db_client_demo.test_db.domain;
+package hr.smilebacksmile.domain;
 
 import org.springframework.data.annotation.Id;
 

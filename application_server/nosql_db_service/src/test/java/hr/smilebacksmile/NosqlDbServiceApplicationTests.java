@@ -1,4 +1,4 @@
-package hr.smilebacksmile.nosql_db_client_demo;
+package hr.smilebacksmile;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class NosqlDbClientDemoApplicationTests {
+public class NosqlDbServiceApplicationTests {
 
     @Test
     public void contextLoads() {
