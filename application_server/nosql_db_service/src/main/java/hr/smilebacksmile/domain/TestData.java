@@ -1,11 +1,12 @@
 package hr.smilebacksmile.domain;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 public class TestData {
 
     @Id
-    private Long id;
+    private String id;
 
     private String code;
 
@@ -18,7 +19,7 @@ public class TestData {
         this.name = name;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
