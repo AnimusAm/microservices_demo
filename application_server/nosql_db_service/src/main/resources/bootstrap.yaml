@@ -1,0 +1,18 @@
+---
+# Properties active for ALL profiles:
+spring:
+  application:
+    name: no_sql_db_demo
+
+
+# Properties related to Config server
+# Properties activated if "demo" is the active profile:
+---
+spring:
+  profiles:
+    active: demo
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+

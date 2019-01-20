@@ -2,25 +2,27 @@ package hr.smilebacksmile.controller;
 
 import hr.smilebacksmile.dao.TestDataRepository;
 import hr.smilebacksmile.domain.TestData;
+import javafx.util.converter.BigIntegerStringConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @RestController
 public class TestDataController {
 
 
-    TestDataRepository dataRepository;
+    final private TestDataRepository dataRepository;
+
+    final private BigIntegerStringConverter idConverter;
 
     @Autowired
-    public TestDataController(TestDataRepository dataRepository) {
+    TestDataController(final TestDataRepository dataRepository) {
         this.dataRepository = dataRepository;
-        this.dataRepository.save(new TestData("Alice", "Smith"));
-        this.dataRepository.save(new TestData("Bob", "Smith"));
+        this.idConverter = new BigIntegerStringConverter();
     }
 
     @GetMapping("/data")
@@ -33,35 +35,44 @@ public class TestDataController {
         return dataRepository.findByCode(code);
     }
 
-    /*
-    @PostMapping("/blog/search")
-    public List<Blog> search(@RequestBody Map<String, String> body){
-        String searchTerm = body.get("text");
-        return blogRespository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
+    @PostMapping("/data/search")
+    public List<TestData> search(@RequestBody Map<String, String> body){
+        String searchTerm = body.get("name_text");
+        return dataRepository.findByNameContaining(searchTerm);
     }
 
-    @PostMapping("/blog")
-    public Blog create(@RequestBody Map<String, String> body){
-        String title = body.get("title");
-        String content = body.get("content");
-        return blogRespository.save(new Blog(title, content));
+    @PostMapping("/data/search_like")
+    public List<TestData> searchLike(@RequestBody Map<String, String> body){
+        String searchTerm = body.get("name_text");
+        return dataRepository.findByNameLike(searchTerm);
     }
 
-    @PutMapping("/blog/{id}")
-    public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
-        int blogId = Integer.parseInt(id);
-        // getting blog
-        Blog blog = blogRespository.findOne(blogId);
-        blog.setTitle(body.get("title"));
-        blog.setContent(body.get("content"));
-        return blogRespository.save(blog);
+    @PostMapping("/data")
+    public TestData create(@RequestBody Map<String, String> body){
+        String code = body.get("code");
+        String name = body.get("name");
+        return dataRepository.save(new TestData(code, name));
     }
 
-    @DeleteMapping("blog/{id}")
+
+    @PutMapping("/data/{id}")
+    public TestData update(@PathVariable String id, @RequestBody Map<String, String> body){
+        BigInteger dataId = idConverter.fromString(id);
+        Optional<TestData> dataOptional = this.dataRepository.findById(dataId);
+        if (dataOptional.isPresent()) {
+            TestData data = dataOptional.get();
+            data.setCode(body.get("code"));
+            data.setName(body.get("name"));
+            return dataRepository.save(data);
+        } else {
+            return null;
+        }
+    }
+
+    @DeleteMapping("data/{id}")
     public boolean delete(@PathVariable String id){
-        int blogId = Integer.parseInt(id);
-        blogRespository.delete(blogId);
+        BigInteger dataId = idConverter.fromString(id);
+        dataRepository.deleteById(dataId);
         return true;
     }
-    */
 }

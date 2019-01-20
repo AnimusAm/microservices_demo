@@ -1,12 +1,13 @@
 package hr.smilebacksmile.domain;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.math.BigInteger;
 
 public class TestData {
 
     @Id
-    private String id;
+    private BigInteger id;
 
     private String code;
 
@@ -19,7 +20,7 @@ public class TestData {
         this.name = name;
     }
 
-    public String getId() {
+    public BigInteger getId() {
         return id;
     }
 
