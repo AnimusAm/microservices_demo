@@ -1,0 +1,13 @@
+---
+# Properties active for ALL profiles:
+spring:
+  application:
+    name: discovery_server
+
+
+# Properties related to Config server - currently not in use
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888

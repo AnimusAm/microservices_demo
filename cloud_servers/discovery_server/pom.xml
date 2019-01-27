@@ -9,43 +9,20 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hr.smilebacksmile</groupId>
-    <artifactId>client_service_vaadin_app</artifactId>
+    <artifactId>discovery_server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>client_service_vaadin_app</name>
-    <description>Demo project for SpringBoot application that uses Vaadin for FE and REST API for accesing another
-        application (microservices based) for storing data in NO SQL DB
-    </description>
+    <name>discovery_server</name>
+    <description>Spring boot and spring cloud dispatcher server - eureka</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.RC2</spring-cloud.version>
-        <vaadin.version>12.0.3</vaadin.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-spring-boot-starter</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,13 +37,6 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-bom</artifactId>
-                <version>${vaadin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
