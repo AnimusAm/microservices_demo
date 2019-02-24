@@ -1,0 +1,15 @@
+---
+# Properties active for ALL profiles:
+spring:
+  application:
+    name: no_sql_db_demo
+
+
+# Properties related to Config server
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+

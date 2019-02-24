@@ -12,7 +12,8 @@
     <artifactId>nosql_db_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>nosql_db_service</name>
-    <description>Spring boot application is discoverable service that stores data int MongoDb</description>
+    <packaging>jar</packaging>
+    <description>Spring boot application is discoverable service that stores data int MongoDb. It's interface is exposed as RestTemplate based REST API</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -25,12 +26,16 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
