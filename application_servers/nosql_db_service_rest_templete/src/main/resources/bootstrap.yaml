@@ -1,6 +1,27 @@
+# Eureka related configuration:
+#   Allows Eureka to recognise multiple instances of this application as separate instances
+eureka:
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
 ---
 # Properties active for ALL profiles:
+# no such properties
 spring:
+  application:
+    name: no_sql_db_rest_temp_demo
+
+---
+# Properties active by SPECIFIC profile:
+# Allows this service to give it self different application names when registered with Eureka
+spring:
+  profiles: one
+  application:
+    name: no_sql_db_rest_temp_demo
+
+---
+spring:
+  profiles: two
   application:
     name: no_sql_db_rest_temp_demo
 

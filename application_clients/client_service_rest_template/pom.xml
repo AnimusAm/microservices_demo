@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hr.smilebacksmile</groupId>
-    <artifactId>client_service_vaadin_app</artifactId>
+    <artifactId>client_service_rest_template</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>client_service_rest_template</name>
     <description>Demo application that uses RestTemplate based REST API for accessing server based service (also using RestTemplate) through Eureka discovery
