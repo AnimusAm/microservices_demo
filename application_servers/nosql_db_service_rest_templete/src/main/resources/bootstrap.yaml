@@ -2,7 +2,7 @@
 # Properties active for ALL profiles:
 spring:
   application:
-    name: no_sql_db_demo
+    name: no_sql_db_rest_temp_demo
 
 
 # Properties related to Config server
