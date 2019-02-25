@@ -29,6 +29,10 @@ public class TestDataController {
     @Autowired
     private LoadBalancerClient client;
 
+    //	This is referencing the RestTemplate we defined earlier:
+    @Autowired
+    private RestTemplate template;
+
     @GetMapping("/data")
     public @ResponseBody List<TestData> getData() {
         final ServiceInstance serviceInstance = client.choose("no_sql_db_rest_temp_demo"); // notice, always one instance is returned!
@@ -36,7 +40,7 @@ public class TestDataController {
         URI uri = serviceInstance.getUri();
         uri = uri.resolve(uri.getPath()+"/data");
         if (uri != null ) {
-            data = (new RestTemplate()).getForObject(uri, TestData[].class);
+            data = template.getForObject(uri, TestData[].class);
         }
         return Arrays.asList(data) ;
     }

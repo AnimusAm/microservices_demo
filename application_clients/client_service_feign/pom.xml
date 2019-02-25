@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hr.smilebacksmile</groupId>
-    <artifactId>client_service_ribbon</artifactId>
+    <artifactId>client_service_feign</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>client_service_ribbon</name>
-    <description>Demo application that uses declarative REST APIs based on Ribbon through Eureka discovery
+    <name>client_service_feign</name>
+    <description>Demo application that uses declarative REST APIs based on Feign through Eureka discovery
     </description>
 
     <properties>
@@ -27,10 +27,6 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
@@ -41,6 +37,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
