@@ -1,5 +1,4 @@
-package hr.smilebacksmile.domain;
-
+package hr.smilebacksmile.domain.no_sql.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -50,6 +49,3 @@ public class TestData {
                 '}';
     }
 }
-
-
-

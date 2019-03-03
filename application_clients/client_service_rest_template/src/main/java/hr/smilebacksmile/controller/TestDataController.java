@@ -1,7 +1,7 @@
 package hr.smilebacksmile.controller;
 
 
-import hr.smilebacksmile.domain.TestData;
+import hr.smilebacksmile.domain.no_sql.dto.TestData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
