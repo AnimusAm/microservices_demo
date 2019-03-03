@@ -2,7 +2,7 @@
 # Properties active for ALL profiles:
 spring:
   application:
-    name: db_client_demo
+    name: db-client-demo
 
 
 # Properties related to Config server

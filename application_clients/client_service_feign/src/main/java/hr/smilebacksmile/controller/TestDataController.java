@@ -19,13 +19,11 @@ import java.util.List;
 @RestController
 public class TestDataController {
 
-
     @Autowired
     private TestDataClient client;
 
     @GetMapping("/data")
     public @ResponseBody List<TestData> getData() {
-        TestData[] data = client.getData();
-        return Arrays.asList(data) ;
+        return client.getData();
     }
 }

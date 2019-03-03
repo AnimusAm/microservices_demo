@@ -2,7 +2,7 @@
 # Properties active for ALL profiles:
 spring:
   application:
-    name: rest_service_client
+    name: rest-service-client
   cloud:
     config:
       uri: http://localhost:8888

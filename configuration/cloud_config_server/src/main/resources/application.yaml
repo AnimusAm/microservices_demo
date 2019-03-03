@@ -8,13 +8,15 @@ spring:
       server:
         git:
           uri: https://github.com/AnimusAm/demo_config.git
+          searchPaths: application_servers
 # This configuration with remote repository works - client gets property source based on config file placed in this repository
 #   But, what I didn't manage to do is:
 #     - define subfolder in which config files will be stored (so that client could reach it successfully)
 #     - define this repo as one of the repos (with pseudo name) that by pattern could 'collect' all requests of the applications that contain 'client' in their name
 #       - the idea was to define repo with name 'demo' that by URI is pointed to this same repo, and to define pattern '*client*/*' that would allow any client application with name that contains 'client' and regardless of profile, to use this repo
 #         - but that didn't quite work
-
+# Also, notice that config server only tracks this repository master branch
+#   -> if repository is on any other branch (even if changes are pushed to remote), changes will not be visible
 
 
 

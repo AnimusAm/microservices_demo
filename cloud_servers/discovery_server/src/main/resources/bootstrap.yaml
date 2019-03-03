@@ -2,7 +2,7 @@
 # Properties active for ALL profiles:
 spring:
   application:
-    name: discovery_server
+    name: discovery-server
 
 
 # Properties related to Config server - currently not in use

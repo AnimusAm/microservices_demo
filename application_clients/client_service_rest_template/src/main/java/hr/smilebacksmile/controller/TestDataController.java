@@ -25,9 +25,9 @@ public class TestDataController {
         this.client = client;
     }
 
-    @GetMapping("/data")
+    @GetMapping(value = "/data")
     public @ResponseBody List<TestData> getData() {
-        final List<ServiceInstance> list = client.getInstances("no_sql_db_rest_temp_demo");
+        final List<ServiceInstance> list = client.getInstances("no-sql-db-rest-temp-demo");
         TestData[] data = new TestData[]{};
         if (list != null && list.size() > 0 ) {
             URI uri = list.get(0).getUri();

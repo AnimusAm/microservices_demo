@@ -2,7 +2,7 @@
 # Properties active for ALL profiles:
 spring:
   application:
-    name: rest_service_client_ribbon
+    name: rest-service-client-feign
   cloud:
     config:
       uri: http://localhost:8888

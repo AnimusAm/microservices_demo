@@ -2,7 +2,8 @@
 # Properties active for ALL profiles:
 spring:
   application:
-    name: rest_service_client_ribbon
+    name: rest-service-client-ribbon
   cloud:
     config:
       uri: http://localhost:8888
+

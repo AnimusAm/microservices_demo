@@ -14,13 +14,5 @@ public class ClientServiceRibbonApplication {
     public static void main(String[] args) {
         SpringApplication.run(ClientServiceRibbonApplication.class, args);
     }
-
-    //  "LoadBalanced" RestTemplate that is used by Ribbon to hook towards available server side services
-    @Bean
-    @LoadBalanced
-    RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
 }
 
